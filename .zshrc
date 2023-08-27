@@ -1,12 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export PATH="/home/maicon/anaconda3/bin:$PATH"  # commented out by conda initialize
-export DENO_INSTALL="/home/maicon/.deno"
+# export PATH="$HOME/anaconda3/bin:$PATH"  # commented out by conda initialize
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH="$PATH:/usr/local/go/bin:/home/maicon/go/bin"
+export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH"
 
-# export NODEJS_HOME="/home/maicon/.nvm/versions/node/v18.16.1"
+# export NODEJS_HOME="$HOME/.nvm/versions/node/v18.16.1"
 # export PATH="$NODEJS_HOME/bin:$PATH"
 
 export RUSTFLAGS="-Wclippy::pedantic -Wclippy::nursery -Wclippy::unwrap_used -Aclippy::module_name_repetitions"
@@ -147,14 +147,14 @@ zplug load
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/maicon/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/maicon/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/maicon/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/maicon/anaconda3/bin:$PATH"
+        export PATH="$HOME/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -166,6 +166,6 @@ source venv/bin/activate 1> /dev/null 2> /dev/null || true
 
 eval "$(starship init zsh)"
 
-source /home/maicon/.config/broot/launcher/bash/br
+source $HOME/.config/broot/launcher/bash/br
 eval "$(atuin init zsh --disable-up-arrow)"
-alias config='/usr/bin/git --git-dir=/home/maicon/.cfg/ --work-tree=/home/maicon'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
