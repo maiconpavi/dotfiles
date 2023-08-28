@@ -167,3 +167,6 @@ PROMPT_COMMAND='echo -en "\033]0;$(whoami)@$(hostname)|$(pwd|cut -d "/" -f 4-100
 source /home/maicon/.config/broot/launcher/bash/br
 alias config='/usr/bin/git --git-dir=/home/maicon/.cfg/ --work-tree=/home/maicon'
 alias config='/usr/bin/git --git-dir=/home/maicon/.cfg/ --work-tree=/home/maicon'
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"

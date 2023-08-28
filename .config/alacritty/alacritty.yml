@@ -418,8 +418,8 @@ font:
 # Default:
 #   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
 #   - (Windows) powershell
-# shell:
-#   program: zsh
+shell:
+  program: zsh
 #  args:
 #    - --login
 

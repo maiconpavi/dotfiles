@@ -1,0 +1,7 @@
+*
+!.gitignore
+!README.md
+!.config/alacritty/alacritty.yml
+!.config/tmux/tmux.conf
+!.zshrc
+!.bashrc

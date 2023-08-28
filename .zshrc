@@ -166,6 +166,6 @@ source venv/bin/activate 1> /dev/null 2> /dev/null || true
 
 eval "$(starship init zsh)"
 
-source $HOME/.config/broot/launcher/bash/br
+source $HOME/.config/broot/launcher/bash/br 2> /dev/null || true
 eval "$(atuin init zsh --disable-up-arrow)"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
