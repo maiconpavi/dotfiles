@@ -5,6 +5,7 @@ export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 export PATH="$HOME/.local/share/nvim/mason/bin/:$PATH"
+export PATH="$PATH:/home/maicon/.local/bin"
 
 # export NODEJS_HOME="$HOME/.nvm/versions/node/v18.16.1"
 # export PATH="$NODEJS_HOME/bin:$PATH"
@@ -95,6 +96,7 @@ plugins=(
     colorize
     zsh-interactive-cd
     zsh-autosuggestions
+    dotenv
     )
 
 source $ZSH/oh-my-zsh.sh
@@ -169,3 +171,11 @@ eval "$(starship init zsh)"
 source $HOME/.config/broot/launcher/bash/br 2> /dev/null || true
 eval "$(atuin init zsh --disable-up-arrow)"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/home/maicon/.bun/_bun" ] && source "/home/maicon/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

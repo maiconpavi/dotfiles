@@ -4,4 +4,4 @@
 !.config/alacritty/alacritty.yml
 !.config/tmux/tmux.conf
 !.zshrc
-!.bashrc
+!.config/lazygit/config.yml
